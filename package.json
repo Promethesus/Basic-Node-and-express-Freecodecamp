@@ -1,7 +1,10 @@
 {
 	"name": "fcc-learn-node-with-express",
 	"version": "0.1.0",
-	"author": {"name": "Jeremy"},
+	"author": {
+		"name": "Jeremy",
+		"email": "Test@test.com"
+	},
 	"dependencies": {
 		"body-parser": "^1.15.2",
 		"cookie-parser": "^1.4.3",
