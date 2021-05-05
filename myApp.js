@@ -8,9 +8,9 @@ app.get("/", function(req, res) {
 const message = "Hello json";
 app.get("/json", function (req, res) {
     if(process.env.VAR_NAME === "upperCase") {
-    response = message.toUpperCase();
+    response = { "message": message.toUpperCase() };
   } else {
-    response = message;
+    response = { "message": message };
   }
 }
 );
