@@ -2,14 +2,14 @@ var express = require('express');
 var app = express();
 
 function getTheTime(){
-  return new Date.toString()
+  return new Date.toString();
 }
 
-app.get('/now', function(req, res, next) {
+app.get("/now", function(req, res, next) {
   req.time = getTheTime();
-  next()
+  next();
 }, function(req, res) {
-  res.json({time: req.time});
+  res.json({ time: req.time });
 });
 
 app.use(function mWareFunction( req, res, next){
