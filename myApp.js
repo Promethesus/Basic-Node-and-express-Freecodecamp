@@ -6,8 +6,8 @@ app.get("/", function(req, res) {
   });
 
 const message = "Hello json";
-app.get("/json", 
-    (req, res) => res.json(
+app.get("/json", (req, res) => res.json(
+  
         {"message": process.env.MESSAGE_STYLE === "uppercase" ? message.toUpperCase() : message
     })
 );
