@@ -1,6 +1,12 @@
 var express = require('express');
 var app = express();
 
+app.use(function mWareFunction( req, res, next){
+  var log = req.method + " " + req.path + " - " + req.ip
+  console.log(log)
+  next()
+  })
+
 app.get("/", function(req, res) {
     res.sendFile(__dirname + "/views/index.html");
   });
