@@ -1,6 +1,14 @@
 var express = require('express');
 var app = express();
 
+app.get('/now', function(req, res, next) {
+  req.time = getTheTime() {
+    return new Date.toString()
+  };
+}, function(req, res) {
+  res.time({"time": req.time});
+});
+
 app.use(function mWareFunction( req, res, next){
   var log = req.method + " " + req.path + " - " + req.ip
   console.log(log)
