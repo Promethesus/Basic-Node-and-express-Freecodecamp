@@ -7,6 +7,7 @@ function getTheTime(){
 
 app.get('/now', function(req, res, next) {
   req.time = getTheTime();
+  next()
 }, function(req, res) {
   res.json({time: req.time});
 });
