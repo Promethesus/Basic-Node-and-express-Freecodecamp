@@ -2,7 +2,7 @@ var express = require('express');
 var app = express();
 
 function getTheTime(){
-  return new Date.toString();
+  return new Date().toString();
 }
 
 app.get("/now", function(req, res, next) {
