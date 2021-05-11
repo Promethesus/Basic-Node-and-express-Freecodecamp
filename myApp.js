@@ -2,11 +2,9 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var app = express();
 
-app.use(function(req, res, next){
-  console.log(bodyParser)
-  bodyParser.urlencoded({extended: false})
-  next()
-})
+app.use(bodyParser.urlencoded({ extended: false }))
+
+app.use(bodyParser.json());
 
 
 function getTheTime(){
