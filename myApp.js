@@ -1,5 +1,13 @@
 var express = require('express');
+var bodyParser = require('body-parser');
 var app = express();
+
+app.use(function(req, res, next){
+  console.log(bodyParser)
+  bodyParser.urlencoded({extended: false})
+  next()
+})
+
 
 function getTheTime(){
   return new Date().toString();
